@@ -1,0 +1,163 @@
+TÓM TẮT
+=================================================================================
+
+Những tập tin này chứa 1.000.209 đánh giá ẩn danh của khoảng 3.900 bộ phim
+do 6.040 người dùng MovieLens tham gia MovieLens vào năm 2000 thực hiện.
+
+GIẤY PHÉP SỬ DỤNG
+===================================================================================
+
+Cả Đại học Minnesota và bất kỳ nhà nghiên cứu nào
+có liên quan đều không thể đảm bảo tính chính xác của dữ liệu, tính phù hợp
+cho bất kỳ mục đích cụ thể nào hoặc tính hợp lệ của kết quả dựa trên
+việc sử dụng bộ dữ liệu. Bộ dữ liệu có thể được sử dụng cho bất kỳ mục đích nghiên cứu
+nào theo các điều kiện sau:
+
+* Người dùng không được nêu hoặc ngụ ý bất kỳ sự xác nhận nào từ
+Đại học Minnesota hoặc Nhóm nghiên cứu GroupLens.
+
+* Người dùng phải thừa nhận việc sử dụng bộ dữ liệu trong
+các ấn phẩm phát sinh từ việc sử dụng bộ dữ liệu
+(xem bên dưới để biết thông tin trích dẫn).
+
+* Người dùng không được phân phối lại dữ liệu mà không có
+sự cho phép riêng.
+
+* Người dùng không được sử dụng thông tin này cho bất kỳ mục đích thương mại hoặc
+nào có doanh thu mà không có sự cho phép trước
+từ một giảng viên của Dự án nghiên cứu GroupLens tại
+Đại học Minnesota.
+
+Nếu bạn có bất kỳ câu hỏi hoặc ý kiến ​​nào khác, vui lòng liên hệ với GroupLens
+<grouplens-info@cs.umn.edu>.
+
+TRÍCH DẪN
+==================================================================================
+
+Để ghi nhận việc sử dụng tập dữ liệu trong các ấn phẩm, vui lòng trích dẫn
+bài báo sau:
+
+F. Maxwell Harper và Joseph A. Konstan. 2015. Bộ dữ liệu MovieLens: Lịch sử
+và Bối cảnh. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4,
+Bài báo 19 (tháng 12 năm 2015), 19 trang. DOI=http://dx.doi.org/10.1145/2827872
+
+LỜI CẢM ƠN
+=====================================================================================
+
+Cảm ơn Shyong Lam và Jon Herlocker đã dọn dẹp và tạo ra bộ dữ liệu
+
+THÔNG TIN THÊM VỀ DỰ ÁN NGHIÊN CỨU GROUPLENS
+=====================================================================================
+
+Dự án nghiên cứu GroupLens là một nhóm nghiên cứu thuộc Khoa
+Khoa học máy tính và Kỹ thuật tại Đại học Minnesota. Các thành viên của
+Dự án nghiên cứu GroupLens tham gia vào nhiều dự án nghiên cứu liên quan
+đến các lĩnh vực lọc thông tin, lọc cộng tác và
+hệ thống đề xuất. Dự án do các giáo sư John Riedl và Joseph
+Konstan dẫn đầu. Dự án bắt đầu khám phá bộ lọc cộng tác tự động vào năm
+1992, nhưng nổi tiếng nhất là thử nghiệm trên toàn thế giới về hệ thống lọc cộng tác tự động cho tin tức Usenet vào năm 1996. Kể từ đó, dự án đã mở rộng phạm vi nghiên cứu để tìm ra các giải pháp lọc thông tin tổng thể,
+tích hợp vào các phương pháp dựa trên nội dung cũng như cải thiện công nghệ lọc cộng tác hiện tại.
+
+Thông tin thêm về dự án Nghiên cứu GroupLens, bao gồm các ấn phẩm nghiên cứu, có thể được tìm thấy tại trang web sau:
+
+http://www.grouplens.org/
+
+GroupLens Research hiện đang vận hành một công cụ đề xuất phim dựa trên
+lọc cộng tác:
+
+http://www.movielens.org/
+
+MÔ TẢ TỆP XẾP HẠNG
+==============================================================================
+
+Tất cả các xếp hạng đều có trong tệp "ratings.dat" và có
+định dạng sau:
+
+UserID::MovieID::Rating::Timestamp
+
+- UserID nằm trong khoảng từ 1 đến 6040
+- MovieID nằm trong khoảng từ 1 đến 3952
+- Xếp hạng được thực hiện theo thang điểm 5 sao (chỉ xếp hạng toàn sao)
+- Dấu thời gian được biểu thị bằng giây kể từ kỷ nguyên được trả về bởi time(2)
+- Mỗi người dùng có ít nhất 20 xếp hạng
+
+MÔ TẢ TỆP NGƯỜI DÙNG
+=================================================================================
+
+Thông tin người dùng nằm trong tệp "users.dat" và có
+định dạng sau:
+
+UserID::Gender::Age::Occupation::Zip-code
+
+Tất cả thông tin nhân khẩu học đều được người dùng tự nguyện cung cấp và
+không được kiểm tra tính chính xác. Chỉ những người dùng đã cung cấp một số thông tin nhân khẩu học mới được đưa vào tập dữ liệu này.
+
+- Giới tính được biểu thị bằng "M" cho nam và "F" cho nữ
+- Độ tuổi được chọn từ các phạm vi sau:
+
+* 1: "Dưới 18 tuổi"
+* 18: "18-24"
+* 25: "25-34"
+* 35: "35-44"
+* 45: "45-49"
+* 50: "50-55"
+* 56: "56+"
+
+- Nghề nghiệp được chọn từ các lựa chọn sau:
+
+* 0: "khác" hoặc không xác định
+* 1: "học thuật/giáo dục"
+* 2: "nghệ sĩ"
+* 3: "nhân viên văn phòng/hành chính"
+* 4: "sinh viên cao đẳng/sau đại học"
+* 5: "dịch vụ khách hàng"
+* 6: "bác sĩ/chăm sóc sức khỏe"
+* 7: "giám đốc điều hành/quản lý"
+* 8: "nông dân"
+* 9: "nội trợ"
+* 10: "học sinh K-12"
+* 11: "luật sư"
+* 12: "lập trình viên"
+* 13: "đã nghỉ hưu"
+* 14: "bán hàng/tiếp thị"
+* 15: "nhà khoa học"
+* 16: "tự kinh doanh"
+* 17: "kỹ thuật viên/kỹ sư"
+* 18: "thợ thủ công/thợ thủ công"
+* 19: "thất nghiệp"
+* 20: "nhà văn"
+
+MÔ TẢ TỆP
+=============================================================================
+
+Thông tin phim nằm trong tệp "movies.dat" và có
+định dạng sau:
+
+MovieID::Title::Genres
+
+- Tiêu đề giống hệt với tiêu đề do IMDB cung cấp (bao gồm
+năm phát hành)
+- Thể loại được phân tách bằng dấu gạch ngang và được chọn từ các thể loại sau:
+
+* Hành động
+* Phiêu lưu
+* Hoạt hình
+* Thiếu nhi
+* Hài kịch
+* Tội phạm
+* Phim tài liệu
+* Chính kịch
+* Giả tưởng
+* Phim đen
+* Kinh dị
+* Nhạc kịch
+* Bí ẩn
+* Lãng mạn
+* Khoa học viễn tưởng
+* Ly kỳ
+* Chiến tranh
+* Miền Tây
+
+- Một số MovieID không tương ứng với phim do trùng lặp ngẫu nhiên
+các mục nhập và/hoặc mục nhập thử nghiệm
+- Phim chủ yếu được nhập bằng tay, do đó có thể có lỗi và sự không nhất quán
