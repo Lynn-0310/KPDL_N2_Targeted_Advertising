@@ -20,8 +20,8 @@ def perform_pca(data, n_components=2):
 
 
 # Đọc dữ liệu
-df = pd.read_csv("data\clean_data_final.csv")
-data = df.drop(columns = ['Gender']).head(500).values
+df = pd.read_csv("D:\code\KPDL\BTL\code\data\clean_data_final.csv")
+data = df.drop(columns = ['Gender']).head(5000).values
 #data = df[['Occupation','Rating','Age']].head(5000).values
 print(data[:20])
 
@@ -87,7 +87,7 @@ metrics_df = pd.DataFrame({
 # Hiển thị nội dung DataFrame
 print(metrics_df)
 # Đường dẫn lưu file CSV
-output_dir = 'results\clarans'
+output_dir = 'D:\code\KPDL\BTL\code\results\clarans'
 output_file = os.path.join(output_dir, 'clarans_evaluation_metrics.csv')
 
 
